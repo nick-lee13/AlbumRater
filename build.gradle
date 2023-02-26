@@ -25,7 +25,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'me.paulschwarz:spring-dotenv:3.0.0'
+	implementation 'me.paulschwarz:spring-dotenv:2.5.4'
 }
 
 tasks.named('test') {
