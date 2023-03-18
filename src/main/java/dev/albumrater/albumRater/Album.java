@@ -14,6 +14,7 @@ import lombok.Data;
 public class Album {
     @Id
     private ObjectId id;
+    private String SPid;
     private String name;
     private String artist;
     private String label;

@@ -3,7 +3,6 @@ package dev.albumrater.albumRater;
 import java.util.List;
 import java.util.Optional;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,7 @@ public class AlbumController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Album>> getSingleAlbum(@PathVariable ObjectId id){
+    public ResponseEntity<Optional<Album>> getSingleAlbum(@PathVariable String id){
         return new ResponseEntity<Optional<Album>>(albumService.singleAlbum(id), HttpStatus.OK);
     }
 }

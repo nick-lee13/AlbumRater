@@ -1,12 +1,10 @@
 package dev.albumrater.albumRater;
 
-import java.util.Optional;
-
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AlbumRepository extends MongoRepository<Album, ObjectId> {
-    Optional<Album> findAlbumBySPid(String SPid);
+public interface ReviewRepository extends MongoRepository<Review, ObjectId>{
+    
 }
