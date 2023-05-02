@@ -24,6 +24,7 @@ public class Album {
     private String spotify_url;
     private List<String> genres;
     private String image;
+    private String youtube_url;
     @DocumentReference
     private List<Review> reviewIds;
 }

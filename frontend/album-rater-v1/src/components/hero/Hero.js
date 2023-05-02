@@ -1,6 +1,9 @@
 import './Hero.css';
 import Carousel from 'react-material-ui-carousel';
 import { Paper } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons"
+import { Link } from 'react-router-dom';
 
 const Hero = ({albums}) => {
     return (
@@ -18,6 +21,15 @@ const Hero = ({albums}) => {
                                             </div>
                                             <div className="album-title">
                                                 <h4>{album.name}</h4>
+                                            </div>
+                                            <div className="album-buttons-container">
+                                                <Link to={`/Trailer/${album.youtube_url}`}>
+                                                <div className="play-button-icon-container">
+                                                    <FontAwesomeIcon className="play-button-icon"
+                                                        icon = {faCirclePlay}
+                                                    />
+                                                </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
