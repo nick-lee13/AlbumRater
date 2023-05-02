@@ -21,9 +21,9 @@ public class Album {
     private String release_date;
     private int total_tracks;
     private List<String> tracks;
-    private String external_url;
+    private String spotify_url;
     private List<String> genres;
-    private List<String> images;
+    private String image;
     @DocumentReference
     private List<Review> reviewIds;
 }
