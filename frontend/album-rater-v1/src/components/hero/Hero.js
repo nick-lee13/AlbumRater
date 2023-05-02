@@ -3,9 +3,17 @@ import Carousel from 'react-material-ui-carousel';
 import { Paper } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const Hero = ({albums}) => {
+
+    const navigate = useNavigate();
+
+    function reviews(albumId){
+        navigate(`/Reviews/${albumId}`);
+    }
+
     return (
         <div className='album-carousel-container'>
             <Carousel>
@@ -30,6 +38,10 @@ const Hero = ({albums}) => {
                                                     />
                                                 </div>
                                                 </Link>
+
+                                                <div className='album-review-button-container'>
+                                                    <Button variant ="info" onClick={() => reviews(album.spid)}>Reviews</Button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

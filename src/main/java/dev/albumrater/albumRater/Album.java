@@ -26,5 +26,5 @@ public class Album {
     private String image;
     private String youtube_url;
     @DocumentReference
-    private List<Review> reviewIds;
+    private List<Review> reviews;
 }
