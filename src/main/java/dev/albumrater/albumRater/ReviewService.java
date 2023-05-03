@@ -19,7 +19,7 @@ public class ReviewService {
 
         mongoTemplate.update(Album.class)
                 .matching(Criteria.where("SPid").is(SPid))
-                .apply(new Update().push("reviewIds").value(review))
+                .apply(new Update().push("reviews").value(review))
                 .first();
 
         return review;
